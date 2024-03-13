@@ -12,9 +12,9 @@
 <body>
   <header id="header">
     <nav>
-      <a id="header-links" href="sobre-mi">Sobre mí</a>
+      <a id="header-links" href="#sobre-mi">Sobre mí</a>
       <a id="header-links" href="proyectos">Proyectos</a>
-      <a id="header-links" href="educacion">Educación</a>
+      <a id="header-links" href="educacion">Conocimiento</a>
       <a id="header-links" href="contactame">Contactame</a>
       <button id="cambiar-tema" class="cambiar-tema"> 
         <svg class="tema-svg" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,28 +26,9 @@
   </header>
   <main>
     <section class="hero-section">
-      <div class="img-hero-section">
-        <img class="a" src="assets/img/red-dead.jpg" alt="">
-        <div class="links-de-interes">
-          <ul>
-            <li>
-              <a href="">
-                <svg viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)" fill="#1B1F23"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div class="presentacion-hero-section">
         <h1>¡Hey! Soy Kevin Osorio</h1> 
-        <img src="assets/img/persona-saludando-emoji.png" class="emoji-titulo" alt="">
+        <img src="assets/img/emoji-saludando.png" class="emoji-titulo" alt="">
         <span class="violeta corchete-izq">{</span>
           <p class="descripcion"><b class="naranja">Desarrollador web autodidacta</b>, especializado en el area del Front-End. Opto por estilos minimalistas que brinden rapidamente la información al visitante. Actualmente ubicado en Buenos Aires, Argentina. 📍 <b class="violeta corchete-der">}</b> </p>
         <div class="skills-stack">
@@ -76,60 +57,66 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="titulo-section">
+    <div class="sections-container">
+      <div class="titulo-section" id="sobre-mi">
         <div class="linea-separadora"></div>
         <h2>Sobre mí</h2>
-        <img class="emoji-section" src="assets/img/emoji-programador .png" alt="">
-        <div class="linea-separadora"></div>
+        <img class="emoji-section" src="assets/img/emoji-usando-laptop.PNG" alt="">
+        <span>{</span>
       </div>
-      <article class="article-sobre-mi">
-        <div class="texto-sobre-mi">
-          <span class="titulo-sobre-mi">¿Quien soy? {</span>
-          <p> Me llamo <b>Kevin Osorio</b> y soy un desarrollador web con pasión por diseños minimalistas y fluidas que sean fáciles al entendimiento de aquel que entre a la pagina web; por el otro lado, puedo adaptarme a estilos mas complejos y desafiantes. Mi trabajo destaca en crear <b class="opacidad">codigo limpio, comentado y dinamico</b>. Poseo conocimiento de las tecnologías basicas para poner en pie una página web desde el lado del Front-End: <b class="naranja">HTML</b>, <b class="azul">CSS</b> y <b class="amarillo">JavaScript</b>. <b class="verde">}</b></p>
-        </div>
-        <div class="imagen-sobre-mi">
-          <img src="assets/img/IMG_7423.jpg" alt="">
-        </div>
-      </article>
-    </section>
+      <section class="section-sobre-mi">
+        <article class="article-sobre-mi">
+          <div class="texto-sobre-mi">
+            <div>
+              <p>Entusiasta de los diseños minimalistas y paginas web fluidas, pero adaptable a estilos mas complejos y desafiantes. Mi trabajo destaca en crear <b class="opacidad">codigo limpio, comentado y dinamico</b>. Poseo conocimiento de las tecnologías basicas para poner en pie una página web desde el lado del Front-End: <b class="naranja">HTML</b>, <b class="azul">CSS</b> y <b class="amarillo">JavaScript</b>. <b class="verde">}</b></p>
+            </div>
+          </div>
+          <div class="imagen-sobre-mi">
+            <img src="assets/img/IMG_7423.jpg" alt="">
+          </div>
+        </article>
+      </section>
 
-    <section class="section">
       <div class="titulo-section">
         <div class="linea-separadora"></div>
         <h2>Proyectos</h2>
-        <img class="emoji-section" src="assets/img/maleta-emoji.png" alt="">
-        <div class="linea-separadora"></div>
+        <img class="emoji-section maleta-emoji" src="assets/img/maleta-emoji.png" alt="">
       </div>
-      <div class="proyectos-box">
-        <article class="article-proyectos">
-  
-        </article>
-        <article class="article-proyectos">
-  
-        </article>
-        <article class="article-proyectos">
-  
-        </article>
-        <article class="article-proyectos">
-  
-        </article>
-      </div>
-    </section>
+      <section class="section-proyectos">
+        <article class="article-proyectos article-arriba">
 
-    <section class="section">
-      <div class="titulo-section">
-        <div class="linea-separadora"></div>
-        <h2>Educación</h2>
-        <img class="emoji-section" src="assets/img/maleta-emoji.png" alt="">
-        <div class="linea-separadora"></div>
-      </div>
-    </section>
+          <div class="article-contenido">
+
+          </div>
+          
+        </article>
+        <article class="article-proyectos article-abajo">
+
+          <div class="article-contenido">
+  
+          </div>
+          
+        </article>
+        <article class="article-proyectos article-arriba">
+
+          <div class="article-contenido">
+  
+          </div>
+          
+        </article>
+        <article class="article-proyectos article-abajo">
+
+          <div class="article-contenido">
+  
+          </div>
+  
+        </article>
+      </section>
+    </div>
   </main>
   <footer>
 
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
