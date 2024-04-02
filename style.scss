@@ -1,3 +1,16 @@
+// colores base predominantes de la pagina
+
+$color-claro: #fcfcf6;
+$color-naranja: #F28C5C;
+$color-marron-oscuro: #120f0d;
+
+//colores de las letras
+
+$color-oscuro-letras: #120f0d;
+$color-azul-letras:  #1c1cb4cc;
+$color-violeta-corchetes: #844984;
+$color-grisaceo-letras: #7d7d7a;
+
 html {
     scroll-behavior: smooth;
 }
@@ -11,7 +24,7 @@ body{
 
     font-family: "Onest", sans-serif;
 
-    background-color: #fcfcf6;
+    background-color: $color-claro;
 
     &::-webkit-scrollbar {
     width: 8px;
@@ -32,7 +45,7 @@ body{
         padding: 45px 0px;
         border-radius: 0px 0px 10px 10px;
         
-        background-color: #fcfaf6;
+        background-color: $color-claro;
         backdrop-filter: blur(10px);
         
         z-index: 100;
@@ -56,33 +69,15 @@ body{
         }
 
         a{
-            color: #111;
+            color: $color-oscuro-letras;
             opacity: 0.9;
 
             transition: 0.2s;
             
             &:hover{
-                color: #ec5007a8;
+                color: $color-naranja;
                 transition: 0.2s;
             }
-        }
-    
-        .cambiar-tema{
-            border: none;
-            background: none;
-            
-            cursor: pointer;
-
-            transition: 0.2s;
-            
-            .tema-svg {
-                stroke: #111; 
-                transition: 0.3s;
-
-                &:hover {
-                    stroke: #ffb936da;
-                }
-            }  
         }
 
         hr{
@@ -95,8 +90,8 @@ body{
             border: none;
             border-radius: 50px;
 
-            background-color: #111;
-            opacity: 0.8;
+            background-color: $color-oscuro-letras;
+            opacity: 0.9;
 
             transition: 0.7s;
         }
@@ -148,7 +143,7 @@ body{
                     font-size: clamp(1rem, 2vw + 1rem, 4rem);
                     font-weight: 800;
                     
-                    color: #1c1cb4cc;
+                    color: $color-azul-letras;
                     
                     @media (max-width: 1024px) {
                         font-size: clamp(1.5rem, 2vw + 1.5rem, 3rem);
@@ -183,16 +178,19 @@ body{
                     
                     font-size: clamp(3rem, 2vw + 3rem, 6rem);
                     font-weight: 700;
-                    
-                    @media (max-width: 576px) {
-                        margin-left: 10px;
-
-                        font-size: clamp(1.5rem, 2vw + 1.5rem, 4rem);
+                    color: $color-violeta-corchetes;
+                     
+                     @media (max-width: 576px) {
+                         margin-left: 10px;
+                         
+                         font-size: clamp(1.5rem, 2vw + 1.5rem, 4rem);
+                        }
                     }
-                }
-            
-                .corchete-der{
-                    margin-left: 5px;
+                    
+                    .corchete-der{
+                        margin-left: 5px;
+
+                        color: $color-violeta-corchetes;
 
                     font-size: 1.3em;
                     font-weight: 700;
@@ -207,6 +205,11 @@ body{
                     line-height: 45px;
                     
                     color: #111111b3;
+
+
+                    .naranja{
+                        color: $color-naranja;
+                    }
                     
                     @media (max-width: 1024px) {
                         margin-top: 5px;
@@ -235,7 +238,7 @@ body{
                     font-size: clamp(1rem, 1vw + 0.8rem, 4rem);
                     font-weight: 800;
                     
-                    color: #111;
+                    color: $color-oscuro-letras;
                     
                     @media(max-width:576px) {
                         gap: 20px;
@@ -277,15 +280,15 @@ body{
             padding: 50px 0px 200px;
             border-radius: 30px 30px 0px 0px;
             
-            background-color: #120f0d;
+            background-color: $color-marron-oscuro;
 
-            box-shadow: 0px 0px 150px 50px inset #0f0d0c,0px -250px 150px 30px #fcfcf6;
+            box-shadow: 0px 0px 150px 50px inset #0f0d0c,0px -250px 150px 30px $color-claro;
             z-index: 10;
             
             @media (max-width: 768px) {
                 gap: 60px;
 
-                box-shadow: 0px 0px 150px 50px inset #0f0d0c, 0px -250px 100px 40px #fcfcf6;
+                box-shadow: 0px 0px 150px 50px inset #0f0d0c, 0px -250px 100px 40px $color-claro;
             }
 
             .titulo-section{
@@ -307,7 +310,7 @@ body{
                 }
 
                 cursor: default;
-                color: #fcfcf6;
+                color: $color-claro;
                 
                 .linea-separadora{
                     width: 100px;
@@ -316,7 +319,7 @@ body{
                     
                     margin: 0px 0px 20px;
                     
-                    background-color: #fcfcf6;
+                    background-color: $color-claro;
                     
                     @media (max-width: 768px) {
                         width: 60px;
@@ -387,6 +390,9 @@ body{
                 }
                 @media (max-width: 576px) {
                     margin-bottom: 200px;
+                }
+                @media (max-width: 400px) {
+                    margin-bottom: 250px;
                 }
 
                 .article-sobre-mi{
@@ -463,13 +469,16 @@ body{
                                 @media (max-width: 576px) {
                                     bottom: -100px;
                                     right: 0px;
-
+                                    
                                     border-radius: 0px 0px 40px 40px;
-
+                                    
                                     font-size: clamp(0.5rem, 1.5vw + 0.5rem, 1.5rem);
                                     line-height: 20px;
-
+                                    
                                     box-shadow: #000 0px 0px 20px 30px;
+                                }
+                                @media (max-width:400px) {
+                                    bottom: -200px;
                                 }
                             }
             
@@ -557,27 +566,12 @@ body{
                         
                         border-radius: 10px;
                         
-                        background-color: #111;
+                        background-color: $color-oscuro-letras;
 
                         box-shadow: rgb(8, 5, 2) 0px 20px 30px 10px;
 
                         @media (max-width:576px) {
                             height: 40vw;
-                        }
-
-                        .cursor-article {
-                            visibility: hidden;
-                            width: 120px;
-                            background-color: black;
-                            color: #fff;
-                            text-align: center;
-                            padding: 5px;
-                            border-radius: 6px;
-                            position: absolute;
-                            z-index: 1;
-                            bottom: 125%;
-                            left: 50%;
-                            margin-left: -60px;
                         }
                     }
                 }
@@ -619,7 +613,7 @@ body{
 
                         width: 100%;
 
-                        border-bottom: 5px solid #fcfcf6;
+                        border-bottom: 5px solid $color-claro;
 
                         background: rgb(18,15,13);
                         background: linear-gradient(180deg, rgba(18,15,13,1) 28%, rgba(9,7,6,1) 86%);
@@ -627,8 +621,6 @@ body{
                         .imagen-article{
                             width: 30%;
                             height: 100%;
-
-                            background-color: #00000056;
 
                             @media (max-width:576px) {
                                 width: 40%;
@@ -658,7 +650,7 @@ body{
                                 font-size: clamp(1rem, 1.2vw + 1rem, 3rem);
                                 font-weight: 800;
 
-                                color: #fcfcf6;
+                                color: $color-claro;
 
                                 @media (max-width: 576px) {
                                     margin-top: 10px;
@@ -699,7 +691,7 @@ body{
             width: 100%;
             height: 600px;
 
-            background-color: #fcfcf6;
+            background-color: $color-claro;
 
             @media (max-width: 768px) {
                 height: 400px;
@@ -717,6 +709,19 @@ body{
                 align-items: center;
                 
                 cursor: default;
+                transition: .2s;
+                
+                &:hover {
+                    transition: .2s;
+                    transform: scale(1.1);
+                    .link-contacto{
+                        color: $color-marron-oscuro;
+                        
+                        b{
+                            color: $color-grisaceo-letras;
+                        }
+                    }
+                }
                 
                 .link-contacto{
                     margin: 0px;
@@ -724,20 +729,28 @@ body{
                     font-size: clamp(1rem, 1vw + 0.6rem, 3rem);
                     font-weight: 700;
                     
-                    color: #7d7d7a;
+                    color: $color-grisaceo-letras;
+
+                    transition: .2s;
                     
                     @media (max-width:576px) {
                         font-size: clamp(.5rem, 1vw + .5rem, 3rem);
                     }
-
+                    
+                    @media (max-width: 400px) {
+                        font-size: clamp(0.2rem, .5vw + 0.5rem, 2rem);
+                    }
+                    
                     b{
-                        color: #120f0d;
+                        color: $color-marron-oscuro;
                     }
                 }
             }
 
             img {
-                width: 5vw;
+                margin-left: 5px;
+
+                width: 3vw;
             }
 
             .contactos-links{
@@ -773,7 +786,7 @@ body{
     
     font-size: clamp(1rem, 1vw + 1rem, 3.5rem);
     
-    background-color: #120f0d;
+    background-color: $color-marron-oscuro;
     
     @media (max-width: 576px) {
         height: 200px;
@@ -793,7 +806,7 @@ body{
         font-weight: 600;
         line-height: 40px;
 
-        color: #7d7d7a;
+        color: $color-grisaceo-letras;
 
         @media (max-width: 576px) {
             line-height: 20px;
@@ -813,9 +826,7 @@ body{
         height: 100%;
     
         .reloj{
-            // margin: 0px 30% 75px 0px;
-            
-            color: #7d7d7a;
+            color: $color-grisaceo-letras;
         }
     }
     }
@@ -824,12 +835,4 @@ body{
 
 a{
 text-decoration: none;
-}
-
-.violeta{
-color: #844984;
-}
-
-.naranja{
-color: #F28C5C;
 }

@@ -27,29 +27,9 @@ articleContenido.addEventListener("mouseleave", e =>{
 articleContenido.addEventListener("mousemove", e =>{
   let y = e.clientY,
       x = e.clientX
-
-  // cursorArticle.setAttribute("style", `top: ${y}px; left: ${x}px`)
   cursorArticle.style.top = y + "px";
   cursorArticle.style.left = x + "px";
 })
-
-// articleContenido.addEventListener("mousemove", e =>{
-//   let y = e.clientY,
-//       x = e.clientX
-
-//   cursorArticle.style.top = y + "px";
-//   cursorArticle.style.left = x + "px";
-// })
-
-// // Mueve estas líneas fuera de los eventos de mouseover y mouseleave
-// cursorArticle.style.display = "none"; // Oculta el cursor al principio
-// articleContenido.addEventListener("mouseover", () => {
-//   cursorArticle.style.display = "block";
-// });
-
-// articleContenido.addEventListener("mouseleave", () => {
-//   cursorArticle.style.display = "none";
-// });
 
 
 // -------------------------------
