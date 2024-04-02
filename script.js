@@ -60,6 +60,7 @@ function horaActual() {
       mm = date.getMinutes();
 
       hh = (hh < 10) ? "0" + hh : hh;
+      mm = (mm < 10) ? "0" + mm : mm;
       // hh = (hh < 12) ? mm + "AM" : mm + "PM";
       if (hh < 12) mm = `${mm} AM`;
       if (hh > 12) mm = `${mm} PM`;
