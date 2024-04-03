@@ -1,3 +1,5 @@
+@import "header";
+
 // colores base predominantes de la pagina
 
 $color-claro: #fcfcf6;
@@ -35,68 +37,7 @@ body{
     border-radius:18px;
     }
 
-    header{
-        position: sticky;
-        top: -0.25px;
-        margin: auto;
-        
-        width: 100%;
-        height: 80px;
-        padding: 45px 0px;
-        border-radius: 0px 0px 10px 10px;
-        
-        background-color: $color-claro;
-        backdrop-filter: blur(10px);
-        
-        z-index: 100;
     
-    nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        gap: 50px;
-        
-        font-size: clamp(.5rem, 1.2vw + .5rem, 2rem);
-        font-weight: 600;
-
-        @media (max-width: 768px) {
-            gap: 20px;
-        }
-        @media (max-width: 576px) {
-            font-size: clamp(.5rem, .5vw + .5rem, 2rem);
-        }
-
-        a{
-            color: $color-oscuro-letras;
-            opacity: 0.9;
-
-            transition: 0.2s;
-            
-            &:hover{
-                color: $color-naranja;
-                transition: 0.2s;
-            }
-        }
-
-        hr{
-            position: absolute;
-            bottom: 0px;
-            margin: 0px;
-
-            width: 20%;
-            height: 4px;
-            border: none;
-            border-radius: 50px;
-
-            background-color: $color-oscuro-letras;
-            opacity: 0.9;
-
-            transition: 0.7s;
-        }
-    }
-    }
 
     main{
 
