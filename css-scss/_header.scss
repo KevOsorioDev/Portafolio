@@ -1,6 +1,13 @@
 $color-claro: #fcfcf6;
-$color-oscuro-letras: #120f0d;
 $color-naranja: #F28C5C;
+$color-marron-oscuro: #120f0d;
+
+//colores de las letras
+
+$color-oscuro-letras: #120f0d;
+$color-azul-letras:  #1c1cb4cc;
+$color-violeta-corchetes: #844984;
+$color-grisaceo-letras: #7d7d7a;
 
 header{
     position: sticky;
@@ -10,7 +17,6 @@ header{
     width: 100%;
     height: 80px;
     padding: 6vh 0px;
-    // border-radius: 0px 0px 10px 10px;
     
     background-color: #f5f5f227;
     backdrop-filter: blur(10px);
@@ -18,6 +24,15 @@ header{
 
     transition: 2s;
     z-index: 10;
+
+    @media (max-width: 1000px) {
+        height: 60px;
+        padding: 4.5vh 0px;
+    }
+
+    @media (max-width: 500px) {
+        height: 40px;
+    }
 
 nav{
     display: flex;
@@ -29,15 +44,30 @@ nav{
     
     font-size: clamp(.5rem, 1.2vw + .5rem, 2rem);
     font-weight: 600;
-
+    
     transition: 3s;
 
-    // @media (max-width: 768px) {
-    //     gap: 20px;
-    // }
-    // @media (max-width: 576px) {
-    //     font-size: clamp(.5rem, .5vw + .5rem, 2rem);
-    // }
+    @media (max-width: 1000px) {
+        gap: 40px;
+
+        font-size: clamp(.3rem, .9vw + .5rem, 1.2rem);
+    }
+    
+    @media (max-width: 768px) {
+        gap: 30px;
+        
+        font-size: clamp(.3rem, .7vw + .5rem, 1.2rem);
+    }
+    
+    @media (max-width: 600px) {
+        gap: 20px;
+    }
+    
+    @media (max-width: 576px) {
+        gap: 15px;
+
+        font-size: clamp(.5rem, .5vw + .5rem, 2rem);
+    }
 
     a{
         color: $color-oscuro-letras;
@@ -81,5 +111,21 @@ nav{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     nav{
         transform: translateX(23%);
+        
+        @media (max-width: 1400px) {
+            transform: translateX(20%);
+        }
+        
+        @media (max-width: 1200px) {
+            transform: translateX(18%);
+        }
+
+        @media (max-width: 768px) {
+            transform: translateX(16%);
+        }
+
+        @media (max-width: 600px) {
+            transform: translateX(14%);
+        }
     }
 }

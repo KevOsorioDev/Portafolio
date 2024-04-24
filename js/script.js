@@ -29,6 +29,21 @@ divQueSeHacer.forEach(e => {
 
 // -------------------------------
 
+function disponibilidad() {
+  let divDisponibilidad = document.querySelector(".div-disponibilidad");
+
+  if (divDisponibilidad.style.backgroundColor === "rgb(28, 190, 41)") {
+    divDisponibilidad.style.backgroundColor = "#36793b";
+  } else {
+    divDisponibilidad.style.backgroundColor = "#1cbe29";
+  }
+}
+
+setInterval(disponibilidad, 1000);
+
+// -------------------------------
+
+
 function horaActual() {
   let date = new Date(),
       hh = date.getHours(),
@@ -44,7 +59,7 @@ function horaActual() {
 
       let time = hh + ":" + mm;
       let reloj = document.querySelector(".reloj")
-      reloj.innerHTML = `Hora local: ${time}`;
+      reloj.innerHTML = `Hora local (GMT-3): ${time}`;
 }
 
 setInterval(horaActual, 1000);
